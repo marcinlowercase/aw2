@@ -1,0 +1,6 @@
+after pull, just run:
+cd frontend
+deno install
+deno task build
+cd ..
+go run main.go
