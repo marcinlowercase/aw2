@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/logo_square-CDF909IV.svg"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,100..1000&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>the browser of oo1 studio</title>
+        <link rel="stylesheet" href="https://core.oo1.studio/outsync.css" />
+      <script type="module" crossorigin src="/assets/main-CL-L5jeS.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-B_YAEJFw.css">
+    </head>
+    <body class="font-['Google_Sans_Flex',sans-serif]">
+        <!--
+                     Outer screen border line:
+                     Spans the whole viewport offset by --padding, calculates border radius
+                     using your reactive engine, and specifies layer 1.
+                   -->
+        <div
+            class="absolute inset-0 border border-dashed border-[#0010ff] z-0 pointer-events-none"
+            style="
+                margin: var(--padding);
+                border-radius: var(--layer-corner-radius);
+                --layer: 1;
+            "
+        ></div>
+
+        <!-- Left Line -->
+        <div
+            class="absolute inset-y-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius)"
+        ></div>
+
+        <!-- Right Line -->
+        <div
+            class="absolute inset-y-0 right-0 border-r border-dashed border-black z-0 pointer-events-none mr-(--device-corner-radius)"
+        ></div>
+
+        <!-- Top Line -->
+        <div
+            class="absolute inset-x-0 top-0 border-t border-dashed border-black z-0 pointer-events-none mt-(--device-corner-radius)"
+        ></div>
+
+        <!-- Bottom Line -->
+        <div
+            class="absolute inset-x-0 bottom-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius)"
+        ></div>
+
+        <!--
+          Changed container to flex-col and justify-center.
+          Added a gap of 8 (gap-8) to space the items nicely in the column.
+        -->
+        <div
+            id="brand"
+            class="relative flex flex-col justify-center items-center min-h-screen w-full overflow-hidden gap-8 p-[calc(var(--device-corner-radius)+var(--padding))]"
+        >
+            <!--
+              Animated Logo (First item in the vertical stack):
+              Made relative with a defined height (h-24) to establish a bounds box in the layout.
+              Its absolute children are pinned left-0 top-0 to align with the text.
+            -->
+            <!--
+              The relative container has a defined height (h-24) and width (w-full).
+              Setting "inset-0 m-auto" on the absolute images forces them to center
+              perfectly both vertically and horizontally inside this container.
+            -->
+            <div id="logo" class="relative h-25 w-25 pointer-events-none z-0">
+                <img
+                    src="/assets/lob2-a00-D_-mgTZV.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 1"
+                />
+                <img
+                    src="/assets/lob2-a01-CYabxDCn.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a02-DDshtIPh.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a03-DJv0hs9_.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a04--GQ4-dJB.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a05-DsbY2uAv.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a06-B1ogDJ4M.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+                <img
+                    src="/assets/lob2-a07-CwTNu_be.svg"
+                    alt="logo"
+                    class="absolute inset-0 m-auto h-full w-auto object-contain"
+                    style="opacity: 0"
+                />
+            </div>
+
+            <!--
+              Foreground Text (Second item in the vertical stack)
+            -->
+            <div
+                id="name"
+                class="z-10 text-[2em] text-center font-['Instrument_Serif',serif] font-black leading-tight"
+            >
+                the browser of <a href="https://oo1.studio" target="_blank" rel="noopener noreferrer">oo1 studio</a>
+            </div>
+
+            <!--
+              Navigation:
+              Using "border-b border-dashed border-current pb-[3px]" on the links forces
+              the dashed underline to draw continuously under both the icon and the text.
+            -->
+            <div
+                id="nav"
+                class="relative z-10 text-[1em] leading-normal flex flex-col items-center justify-center font-normal gap-(--device-corner-radius) mt-4"
+            >
+                <!-- Row-on-landscape group for download and source -->
+                <div class="flex gap-[calc(var(--padding)*4)] flex-row items-center">
+                    <!-- Download Link (Google Play) -->
+                    <a
+                        href="https://play.google.com/store/apps/details?id=studio.oo1.browser"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-black inline-flex items-center gap-1 border-b border-dashed border-current pb-[3px] hover:opacity-70 transition-opacity"
+                    >
+                        <img
+                            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%231f1f1f'%3e%3cpath%20d='M480-320%20280-520l56-58%20104%20104v-326h80v326l104-104%2056%2058-200%20200ZM240-160q-33%200-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0%2033-23.5%2056.5T720-160H240Z'/%3e%3c/svg%3e"
+                            alt=""
+                            class="h-[1em] w-auto object-contain"
+                        />
+                        <span>download</span>
+                    </a>
+
+                    <!-- Source Link (GitHub) -->
+                    <a
+                        href="https://github.com/marcinlowercase/a/releases"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-black inline-flex items-center gap-1 border-b border-dashed border-current pb-[3px] hover:opacity-70 transition-opacity"
+                    >
+                        <img
+                            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%231f1f1f'%3e%3cpath%20d='M320-240%2080-480l240-240%2057%2057-184%20184%20183%20183-56%2056Zm320%200-57-57%20184-184-183-183%2056-56%20240%20240-240%20240Z'/%3e%3c/svg%3e"
+                            alt=""
+                            class="h-[1em] w-auto object-contain"
+                        />
+                        <span>source</span>
+                    </a>
+                </div>
+
+                <!-- Privacy Policy Link (styled with a bottom border to match line thickness and gap) -->
+                <a
+                    href="/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-black inline-flex items-center gap-1 border-b border-dashed border-current pb-[3px] hover:opacity-70 transition-opacity"
+                >
+                    <!--<img
+                        src="src/data/img/ic_docs.svg"
+                        alt=""
+                        class="h-[1em] w-auto object-contain"
+                    />-->
+                    <span>privacy policy</span>
+                </a>
+            </div>
+    </body>
+</html>
