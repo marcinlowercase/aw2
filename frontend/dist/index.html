@@ -17,8 +17,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>the browser of oo1 studio</title>
         <link rel="stylesheet" href="https://core.oo1.studio/outsync.css" />
-      <script type="module" crossorigin src="/assets/main-BnrzhJda.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-B43hnLXw.css">
+      <script type="module" crossorigin src="/assets/main-D3OiUR2j.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-DBno-1Cy.css">
     </head>
     <body class="font-['Google_Sans_Flex',sans-serif]">
         <!--
@@ -40,12 +40,13 @@
               ensuring a clean, blank gap of exactly --layer-height.
             -->
             <div
-                class="absolute bg-white"
+                class="absolute bg-black"
                 style="
-                    bottom: -4px;
-                    left: -4px;
-                    width: calc(var(--layer-height) + 4px);
-                    height: calc(var(--layer-height) + 4px);
+                border-radius: var(--layer-corner-radius);
+                    bottom: -2px;
+                    left: -2px;
+                    width: calc(var(--layer-height) + 2px);
+                    height: calc(var(--layer-height) + 2px);
                 "
             ></div>
         </div>
@@ -55,8 +56,7 @@
           Starts from 0 top (top-0) and leaves a gap equal to --layer-height from the bottom.
         -->
         <div
-            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--layer-height)"
-            style="layer:1"
+            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--padding)"
         ></div>
 
         <!-- Right Line -->
@@ -74,8 +74,7 @@
           Starts at --layer-height from the left, ending at 0 on the right (right-0).
         -->
         <div
-            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--layer-height)"
-            style="layer: 1"
+            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--padding)"
         ></div>
 
         <!--
