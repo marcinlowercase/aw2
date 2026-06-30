@@ -17,10 +17,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>the browser of oo1 studio</title>
         <link rel="stylesheet" href="https://core.oo1.studio/outsync.css" />
-      <script type="module" crossorigin src="/assets/main-Brt7ri8t.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-BJ2Nc04z.css">
+      <script type="module" crossorigin src="/assets/main-Bs0k-Zeq.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-BqB6qEXZ.css">
     </head>
     <body class="font-['Google_Sans_Flex',sans-serif]">
+
+        <!--
+          Left Line:
+          Starts from 0 top (top-0) and leaves a gap equal to --layer-height from the bottom.
+        -->
+        <div
+            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--padding)"
+        ></div>
+
+        <!-- Right Line -->
+        <div
+            class="absolute inset-y-0 right-0 border-r border-dashed border-black z-0 pointer-events-none mr-(--device-corner-radius)"
+        ></div>
+
+        <!-- Top Line -->
+        <div
+            class="absolute inset-x-0 top-0 border-t border-dashed border-black z-0 pointer-events-none mt-(--device-corner-radius)"
+        ></div>
+
+        <!--
+          Bottom Line:
+          Starts at --layer-height from the left, ending at 0 on the right (right-0).
+        -->
+        <div
+            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--padding)"
+        ></div>
+
+
         <!--
           Outer screen border line:
           Contains a solid background mask in the bottom-left corner to cleanly
@@ -51,31 +79,6 @@
             ></div>
         </div>
 
-        <!--
-          Left Line:
-          Starts from 0 top (top-0) and leaves a gap equal to --layer-height from the bottom.
-        -->
-        <div
-            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--padding)"
-        ></div>
-
-        <!-- Right Line -->
-        <div
-            class="absolute inset-y-0 right-0 border-r border-dashed border-black z-0 pointer-events-none mr-(--device-corner-radius)"
-        ></div>
-
-        <!-- Top Line -->
-        <div
-            class="absolute inset-x-0 top-0 border-t border-dashed border-black z-0 pointer-events-none mt-(--device-corner-radius)"
-        ></div>
-
-        <!--
-          Bottom Line:
-          Starts at --layer-height from the left, ending at 0 on the right (right-0).
-        -->
-        <div
-            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--padding)"
-        ></div>
 
         <!--
           Changed container to flex-col and justify-center.
