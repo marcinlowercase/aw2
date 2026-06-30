@@ -21,10 +21,10 @@
     </head>
     <body class="font-['Google_Sans_Flex',sans-serif]">
         <!--
-                     Outer screen border line:
-                     Spans the whole viewport offset by --padding, calculates border radius
-                     using your reactive engine, and specifies layer 1.
-                   -->
+          Outer screen border line:
+          Contains a solid background mask in the bottom-left corner to cleanly
+          erase a portion of the border equal to --layer-height.
+        -->
         <div
             class="absolute inset-0 border border-dashed border-[#0010ff] z-0 pointer-events-none"
             style="
@@ -32,7 +32,22 @@
                 border-radius: var(--layer-corner-radius);
                 --layer: 1;
             "
-        ></div>
+        >
+            <!--
+              Bottom-Left Mask:
+              Offsets slightly (-4px) to guarantee it fully hides the 1px dashed border stroke,
+              ensuring a clean, blank gap of exactly --layer-height.
+            -->
+            <div
+                class="absolute bg-white"
+                style="
+                    bottom: -4px;
+                    left: -4px;
+                    width: calc(var(--layer-height) + 4px);
+                    height: calc(var(--layer-height) + 4px);
+                "
+            ></div>
+        </div>
 
         <!--
           Left Line:
