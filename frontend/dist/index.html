@@ -17,8 +17,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>the browser of oo1 studio</title>
         <link rel="stylesheet" href="https://core.oo1.studio/outsync.css" />
-      <script type="module" crossorigin src="/assets/main-CL-L5jeS.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-B_YAEJFw.css">
+      <script type="module" crossorigin src="/assets/main-BnrzhJda.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-B43hnLXw.css">
     </head>
     <body class="font-['Google_Sans_Flex',sans-serif]">
         <!--
@@ -35,9 +35,13 @@
             "
         ></div>
 
-        <!-- Left Line -->
+        <!--
+          Left Line:
+          Starts from 0 top (top-0) and leaves a gap equal to --layer-height from the bottom.
+        -->
         <div
-            class="absolute inset-y-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius)"
+            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--layer-height)"
+            style="layer:1"
         ></div>
 
         <!-- Right Line -->
@@ -50,9 +54,13 @@
             class="absolute inset-x-0 top-0 border-t border-dashed border-black z-0 pointer-events-none mt-(--device-corner-radius)"
         ></div>
 
-        <!-- Bottom Line -->
+        <!--
+          Bottom Line:
+          Starts at --layer-height from the left, ending at 0 on the right (right-0).
+        -->
         <div
-            class="absolute inset-x-0 bottom-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius)"
+            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--layer-height)"
+            style="layer: 1"
         ></div>
 
         <!--
@@ -131,7 +139,8 @@
                 id="name"
                 class="z-10 text-[2em] text-center font-['Instrument_Serif',serif] font-black leading-tight"
             >
-                the browser of <a href="https://oo1.studio" target="_blank" rel="noopener noreferrer">oo1 studio</a>
+                <span class="inline-block whitespace-nowrap">the browser</span>
+                <span class="inline-block whitespace-nowrap">of <a href="https://oo1.studio" target="_blank" rel="noopener noreferrer">oo1 studio</a></span>
             </div>
 
             <!--
@@ -162,7 +171,7 @@
 
                     <!-- Source Link (GitHub) -->
                     <a
-                        href="https://github.com/marcinlowercase/a/releases"
+                        href="https://github.com/marcinlowercase/a/"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-black inline-flex items-center gap-1 border-b border-dashed border-current pb-[3px] hover:opacity-70 transition-opacity"
