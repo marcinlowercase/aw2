@@ -26,7 +26,7 @@
           Starts from 0 top (top-0) and leaves a gap equal to --layer-height from the bottom.
         -->
         <div
-            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-(--padding)"
+            class="absolute top-0 left-0 border-l border-dashed border-black z-0 pointer-events-none ml-(--device-corner-radius) bottom-0 portrait:bottom-(--padding)"
         ></div>
 
         <!-- Right Line -->
@@ -44,7 +44,7 @@
           Starts at --layer-height from the left, ending at 0 on the right (right-0).
         -->
         <div
-            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-(--padding)"
+            class="absolute bottom-0 right-0 border-b border-dashed border-black z-0 pointer-events-none mb-(--device-corner-radius) left-0 portrait:left-(--padding)"
         ></div>
 
 
@@ -67,14 +67,8 @@
               ensuring a clean, blank gap of exactly --layer-height.
             -->
             <div
-                class="absolute bg-white"
-                style="
-                border-radius: var(--layer-corner-radius);
-                    bottom: -4px;
-                    left: -4px;
-                    width: calc(var(--layer-height) + 4px);
-                    height: calc(var(--layer-height) + 4px);
-                "
+                class="portrait:absolute landscape:hidden bg-white -bottom-1 -left-1 w-[calc(var(--layer-height)+4px)] h-[calc(var(--layer-height)+4px)] rounded-(--layer-corner-radius)"
+
             ></div>
         </div>
 
